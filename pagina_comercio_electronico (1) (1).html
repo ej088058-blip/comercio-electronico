@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comercio Electrónico y Medio Ambiente</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+scroll-behavior:smooth;
+}
+
+header{
+background:#0f172a;
+color:white;
+padding:20px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.menu-btn{
+position:fixed;
+top:20px;
+left:20px;
+background:#16a34a;
+color:white;
+border:none;
+padding:10px 15px;
+font-size:25px;
+border-radius:10px;
+cursor:pointer;
+z-index:2000;
+}
+
+.sidebar{
+position:fixed;
+left:-250px;
+top:0;
+width:250px;
+height:100%;
+background:#111827;
+padding-top:80px;
+transition:0.3s;
+z-index:1500;
+}
+
+.sidebar.active{
+left:0;
+}
+
+.sidebar a{
+display:block;
+padding:15px 20px;
+color:white;
+text-decoration:none;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar a:hover{
+background:#16a34a;
+}
+
+section{
+min-height:100vh;
+padding:100px 10%;
+position:relative;
+border-bottom:3px solid #dbe4ee;
+}
+
+section h2{
+font-size:2.5rem;
+margin-bottom:20px;
+color:#0f172a;
+}
+
+.arrow-home{
+position:absolute;
+top:20px;
+right:20px;
+background:#0f172a;
+color:white;
+padding:10px 15px;
+border-radius:50px;
+text-decoration:none;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:white;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 30px;
+background:white;
+color:#16a34a;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+}
+
+table{
+width:100%;
+margin-top:20px;
+border-collapse:collapse;
+background:white;
+}
+
+th,td{
+padding:15px;
+border:1px solid #ccc;
+text-align:center;
+}
+
+th{
+background:#16a34a;
+color:white;
+}
+
+.impactos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.positivo{
+background:#dcfce7;
+padding:20px;
+border-radius:15px;
+}
+
+.negativo{
+background:#fee2e2;
+padding:20px;
+border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<div class="sidebar" id="sidebar">
+<a href="#portada">🏠 Portada</a>
+<a href="#menu">📋 Menú</a>
+<a href="#problema">⚠ Problema</a>
+<a href="#tecnologia">💻 Tecnología</a>
+<a href="#impactos">📊 Impactos</a>
+<a href="#caso">🌎 Caso Real</a>
+<a href="#soluciones">✅ Soluciones</a>
+<a href="#reflexion">🧠 Reflexión</a>
+</div>
+
+<header>
+<h1>Comercio Electrónico y Medio Ambiente</h1>
+</header>
+
+<section class="hero" id="portada">
+<h1>El comercio electrónico también deja huella</h1>
+<p>
+Tecnología e Informática | Comercio Electrónico | Impacto ambiental de las compras online.
+</p>
+<a href="#menu" class="btn">Iniciar</a>
+</section>
+
+<section id="menu">
+<a href="#portada" class="arrow-home">⬅ Inicio</a>
+<h2>Explora el tema</h2>
+
+<div class="card-grid">
+<div class="card">⚠ Problema</div>
+<div class="card">💻 Tecnología</div>
+<div class="card">📊 Impactos</div>
+<div class="card">🌎 Caso Real</div>
+<div class="card">✅ Soluciones</div>
+<div class="card">🧠 Reflexión Final</div>
+</div>
+</section>
+
+<section id="problema">
+<a href="#portada" class="arrow-home">⬅ Inicio</a>
+<h2>¿Cuál es el problema?</h2>
+
+<p>
+El comercio electrónico ha aumentado muchísimo en los últimos años.
+Cada día millones de personas compran productos por internet y reciben paquetes en sus hogares.
+</p>
+
+<ul>
+<li>📦 Uso excesivo de cartón y plástico.</li>
+<li>🚚 Contaminación por transporte.</li>
+<li>🌍 Mayor huella ambiental.</li>
+<li>⚡ Consumo energético digital.</li>
+</ul>
+
+<div class="card" style="margin-top:30px;">
+<h3>⚠ Frase de impacto</h3>
+<p>“La comodidad digital también contamina.”</p>
+</div>
+</section>
+
+<section id="tecnologia">
+<a href="#portada" class="arrow-home">⬅ Inicio</a>
+<h2>¿Qué tecnología está involucrada?</h2>
+
+<div class="card-grid">
+<div class="card">
+<h3>🛒 Plataformas digitales</h3>
+<p>Permiten comprar productos por internet.</p>
+</div>
+
+<div class="card">
+<h3>☁ Centros de datos</h3>
+<p>Guardan información de millones de usuarios.</p>
+</div>
+
+<div class="card">
+<h3>🚚 Sistemas logísticos</h3>
+<p>Organizan entregas rápidas.</p>
+</div>
+
+<div class="card">
+<h3>📱 Aplicaciones móviles</h3>
+<p>Facilitan las compras desde celulares.</p>
+</div>
+</div>
+</section>
+
+<section id="impactos">
+<a href="#portada" class="arrow-home">⬅ Inicio</a>
+<h2>Impactos positivos y negativos</h2>
+
+<div class="impactos">
+
+<div class="positivo">
+<h3>✅ Positivos</h3>
+<ul>
+<li>Facilita las compras.</li>
+<li>Ayuda a pequeños negocios.</li>
+<li>Acceso rápido a productos.</li>
+</ul>
+</div>
+
+<div class="negativo">
+<h3>❌ Negativos</h3>
+<ul>
+<li>Contaminación por entregas.</li>
+<li>Mucho plástico y cartón.</li>
+<li>Gran consumo energético.</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section id="caso">
+<a href="#portada" class="arrow-home">⬅ Inicio</a>
+<h2>Caso real</h2>
+
+<p>
+Muchas personas compran ropa, comida y tecnología por internet cada semana.
+</p>
+
+<table>
+<tr>
+<th>Tiempo</th>
+<th>Paquetes</th>
+</tr>
+
+<tr>
+<td>1 mes</td>
+<td>10 paquetes</td>
+</tr>
+
+<tr>
+<td>1 año</td>
+<td>120 paquetes</td>
+</tr>
+</table>
+
+<div class="card" style="margin-top:30px;">
+<h3>❓ Pregunta crítica</h3>
+<p>¿Realmente necesitamos comprar tantas cosas por internet?</p>
+</div>
+</section>
+
+<section id="soluciones">
+<a href="#portada" class="arrow-home">⬅ Inicio</a>
+<h2>¿Qué podemos hacer?</h2>
+
+<div class="card-grid">
+<div class="card">♻ Reciclar empaques.</div>
+<div class="card">📦 Comprar solo lo necesario.</div>
+<div class="card">🌱 Reutilizar cajas.</div>
+<div class="card">🚲 Elegir entregas ecológicas.</div>
+<div class="card">🛒 Comprar productos locales.</div>
+<div class="card">⚡ Apoyar empresas sostenibles.</div>
+</div>
+</section>
+
+<section id="reflexion">
+<a href="#portada" class="arrow-home">⬅ Inicio</a>
+<h2>Mi postura frente a la tecnología</h2>
+
+<p>
+Aprendí que el comercio electrónico facilita muchas cosas,
+pero también genera contaminación y residuos.
+</p>
+
+<div class="card" style="margin-top:40px;">
+<h3>🧠 “Usa la tecnología con responsabilidad.”</h3>
+</div>
+</section>
+
+<script>
+function toggleMenu(){
+document.getElementById('sidebar').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
